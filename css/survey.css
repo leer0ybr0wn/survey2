@@ -1,0 +1,63 @@
+header.tallheader { padding: 4rem 1rem; }
+.survey header h1 { font-size: 3rem; }    /* off for responsive */
+.tealbg { background-color: #5AAEB8; color: #FFF; }
+.tealbg h1 { color: #FFF; }
+.zinglogo { margin: 1rem 0; }
+img { display: inline-block; }
+.button { font-size: 1.5rem; text-transform: uppercase; font-family: 'brandon-bold'; text-decoration: none; color: #FF7637; background-color: #FFF; border: 3px solid #FF7637; border-radius: 3rem; padding: 0.25rem 1.5rem; margin: 2rem auto; display: inline-block; cursor: pointer; }
+.button i { transform: scale(0.75); margin-left: 1rem; }
+.button:hover, .button:active { color: #FFF; background-color: #FF7637; }
+.survey section { margin-top: 4rem; margin-bottom: 0; }
+.survey p { font-size: 1.2rem; }
+.largeicon { font-size: 5rem; color: #5AAEB8; margin: 1rem auto; }
+.surveyHeader { text-align: left; padding: 2rem 0; }
+.surveyHeader .content_container { display: flex; }
+.headtitle { margin-left: 2rem; padding-left: 2rem; border-left: solid 1px rgba(255,255,255,0.5); }
+.headtitle p { margin-bottom: 0; opacity: 0.8; }
+header.surveyHeader > .content_container { height: unset; }
+input, label { cursor: pointer; }
+#surveyForm label { font-size: 1.2rem; display: inline-block; width: 18%; }
+#surveyForm input[type=radio] ~ label:hover::before, #surveyForm input[type=radio] ~ label:active::before { color: #5AAEB8; }
+.tab { display: none; margin: 6rem 0; position: relative; }
+.tab p { text-align: left; margin-bottom: 4rem; }
+.tab > div { display: flex; justify-content: space-around; }
+.tab textarea { display: block; width: 100%; padding: 1rem 1.2rem; font-family: 'brandon-light'; color: #5A5A5A; font-size: 1.2rem; border: solid 2px rgba(90,90,90,0.15); box-sizing: border-box; border-radius: 0.25rem; }
+.tab textarea:hover { border-color: rgba(90,90,90,0.3); }
+.tab textarea:focus, .tab textarea:active { border-color: #5AAEB8; }
+/*#nextBtn { opacity: 0.25; }*/
+#prevBtn.button { color: #5AAEB8; border-color: #FFF; padding-left: 1rem; }
+#prevBtn.button i { margin-left: 0; margin-right: 1rem; }
+#prevBtn.button:hover, #prevBtn.button:active { background-color: #FFF; border-color: #5AAEB8; }
+#controlBtns { display: flex; justify-content: space-between; border-top: solid 1px rgba(90,90,90,0.2); }
+#controlBtns .button { margin-left: 0; margin-right: 0; }
+#surveyForm input[type=radio] { border: 0; clip: rect(0 0 0 0); height: 1px; width: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; opacity: 0; }
+#surveyForm input[type=radio] ~ label:before { font-family: Font Awesome\ 5 Free; display: block; content: "\f111"; font-size: 2rem; color: #DDD; padding: 1rem; }
+#surveyForm input[type=radio]:checked + label:before { content: "\f058"; color: #FF7637; }
+#waiting { position: absolute; width: 100vw; height: 100vh; top: 0; bottom: 0; background-color: #FFF; display: none; }
+#spinner { position: absolute; top: calc(50% - 2rem); left: calc(50% - 2rem); font-size: 4rem; color: #5AAEB8; animation-duration: 1s; }
+
+
+/*__________ Responsive __________*/
+
+@media screen and (max-width: 1280px) {
+	.tab { margin: 2rem 0; }
+	.tab p { margin-bottom: 2rem; }
+}
+
+@media screen and (max-width: 720px) {
+	.surveyHeader { padding: 0; }
+	.survey header h1 { font-size: 2rem; line-height: 1.1; }
+	header.tallheader { padding: 1rem; }
+	.headtitle { margin-left: 1rem; padding-left: 1rem; }
+	#formpage .zinglogo { width: 70px; height: auto; margin-top: 0.25rem; }
+	.survey section { margin-top: 0; }
+	.tab { margin: 1rem 0; }
+	.tab p { margin: 1rem 0; }
+	.tab > div { flex-direction: column; }
+	#surveyForm label { width: 100%; text-align: left; }
+	#surveyForm input[type=radio] ~ label:before { display: inline-block; position: relative; bottom: -0.3rem; }
+	.survey p { font-size: 1.2rem; }
+	.button i { margin-left: 0.5rem; }
+	#prevBtn.button i { margin-right: 0.5rem; }
+	.button { margin-bottom: 1rem; }
+}
