@@ -20,7 +20,9 @@ function showTab(n) {
     nextBtnActive();
   } else {
     document.getElementById("nextBtn").innerHTML = "Next<i class='fas fa-chevron-right'></i>";
-    document.getElementById("nextBtn").style.opacity = "0.25";
+    if (!validateForm() ) {
+      document.getElementById("nextBtn").style.opacity = "0.25";
+    }
   }
   // and update the current & total number of questions:
   document.getElementById("currentq").innerHTML = currentTab + 1;
